@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <title>Monitor Financeiro</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Monitor Financeiro</h1>
+    <div class="grid grid-2">
+      <!-- Form -->
+      <div class="card">
+        <h2>Adicionar Transação</h2>
+        <p class="description">Insira uma nova receita ou despesa</p>
+        <form>
+          <label>Tipo de Transação</label>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="type" value="expense" checked /> Despesa
+            </label>
+            <label>
+              <input type="radio" name="type" value="income" /> Receita
+            </label>
+          </div>
+
+          <label for="amount">Valor</label>
+          <input type="number" id="amount" placeholder="0.00" step="0.01" min="0" />
+
+          <label for="description">Descrição</label>
+          <input type="text" id="description" placeholder="Ex: Internet?" />
+
+          <label for="date">Data</label>
+          <input type="date" id="date" />
+
+          <button class="btn" type="submit">Adicionar Transação</button>
+        </form>
+      </div>
+
+      <!-- Saldo e Transações -->
+      <div class="grid">
+        <div class="card">
+          <h2>Saldo Atual</h2>
+          <div class="balance positive">R$ 1,124.02 <span style="font-size: 1rem;">Crédito</span></div>
+        </div>
+
+        <div class="card">
+          <h2>Transações recentes</h2>
+          <p class="description">Suas últimas receitas e despesas</p>
+          <div class="transactions">
+            <div class="transaction">
+              <div class="transaction-info">
+                <strong>Salário</strong>
+                <span>20 de janeiro de 2025</span>
+              </div>
+              <span class="transaction-income">+R$ 1200.00</span>
+            </div>
+
+            <div class="transaction">
+              <div class="transaction-info">
+                <strong>Energia</strong>
+                <span>15 de janeiro de 2025</span>
+              </div>
+              <span class="transaction-expense">-R$ 105.99</span>
+            </div>
+
+            <div class="transaction">
+              <div class="transaction-info">
+                <strong>Streaming</strong>
+                <span>13 de janeiro de 2025</span>
+              </div>
+              <span class="transaction-expense">-R$ 30.00</span>
+            </div>
+          </div>
+          <div class="footer">
+            <span>Mostrando as últimas 3 receitas e despesas</span>
+            <a href="#">Ver tudo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
